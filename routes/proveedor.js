@@ -8,7 +8,7 @@ router.post('/', proveedorController.agregarProveedores);
 router.get('/', proveedorController.mostrarProveedores);
 router.get('/:id', proveedorController.buscarProveedores);
 router.put('/:id', proveedorController.actualizarProveedores);
-router.patch('/:id', proveedorController.modificarProveedores);
+//router.patch('/:id', proveedorController.modificarProveedores);
 router.delete('/:id', proveedorController.eliminarProveedores);
 
 
