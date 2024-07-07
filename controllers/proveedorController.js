@@ -40,7 +40,7 @@ exports.buscarProveedores = async (req, res) => {
         let proveedor = await Proveedor.findById(req.params.id);
 
         if (!proveedor) {
-            res.status(400).json({ msg: 'Hubo un error al consultar el proveedor' });
+            res.status(404).json({ msg: 'Nose encuentra el proveedor' });
         } else {
             res.json(proveedor);
         }
