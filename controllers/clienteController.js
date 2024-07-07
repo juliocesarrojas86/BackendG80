@@ -40,7 +40,7 @@ exports.buscarCliente = async (req, res) => {
         let cliente = await Cliente.findById(req.params.id);
 
         if (!cliente) {
-            res.status(400).json({ msg: 'Hubo un error al consultar el cliente' });
+            res.status(400).json({ msg: "Hubo un error al consultar el cliente"});
         } else {
             res.json(cliente);
         }

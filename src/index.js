@@ -9,9 +9,14 @@ const port = process.env.PORT || 5000;
 ConectarBD();
 app.use(cors());
 
-app.use(express.json());
+//habiltamos  express.json
+app.use(express.json({extended:true}));
+
+//rutas de mi aplicacion
 app.use('/api/clientes', require('../routes/cliente'));
 app.use('/api/proveedores', require('../routes/proveedor'));
+app.use('/api/auth', require('../routes/auth'));
+app.use('/api/usuarios', require('../routes/usuarios'));
 
 
 
